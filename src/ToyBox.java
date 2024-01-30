@@ -8,21 +8,12 @@ public class ToyBox {
 
     public ToyBox() {
         this.toyList = new ArrayList<>();
-        initializeToyBox();
-        this.remainingToys = toyList.size();
+        this.remainingToys = 0;
     }
 
-    private void initializeToyBox() {
-        toyList.add(new Toy(0, "Pop puck и магнитные кольца-антистресс – задачки на ловкость", 100));
-        toyList.add(new Toy(1, "GooJitZu из «Гуджитсу»", 110));
-        toyList.add(new Toy(2, "Осьминожки-вывернушки", 120));
-        toyList.add(new Toy(3, "Игрушки с прозрачным корпусом и вращающимися шестеренками", 130));
-        toyList.add(new Toy(4, "Infinity Nado по мотивам мультфильмов в жанре аниме", 140));
-        toyList.add(new Toy(5, "Куклы-сюрприз", 150));
-        toyList.add(new Toy(6, "Мягкие подушки-игрушки", 160));
-        toyList.add(new Toy(7, "Вертолет на инфракрасном управлении", 170));
-        toyList.add(new Toy(8, "Магнитные конструкторы", 180));
-        toyList.add(new Toy(9, "«Умный зайка»", 190));
+    public void addToy(Toy toy) {
+        toyList.add(toy);
+        remainingToys = toyList.size();
     }
 
     public void removeToy(Toy toy) {
